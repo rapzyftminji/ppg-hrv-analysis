@@ -140,7 +140,7 @@ ppg-hrv-analysis/
 
 ### ppgSignalProcessing Class
 Handles signal preprocessing and DWT decomposition:
-- Quadrature mirror filter implementation (Q1-Q6)
+- Quadrature mirror filter implementation (Q1-Q8)
 - Multi-level wavelet decomposition
 - Signal normalization and detrending
 - Downsampling operations
