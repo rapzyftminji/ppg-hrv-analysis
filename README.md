@@ -176,7 +176,7 @@ Key parameters that can be adjusted:
 ## Technical Details
 
 ### Discrete Wavelet Transform
-The application uses a custom DWT implementation with quadrature mirror filters based on the Mallat algorithm. Six levels of filters (Q1-Q6) are available for different frequency band separations.
+The application uses a custom DWT implementation with quadrature mirror filters based on the Mallat algorithm. Six levels of filters (Q1-Q8) are available for different frequency band separations.
 
 ### PD Controller-Based Peak Detection
 The peak detection algorithm employs a **Proportional-Derivative (PD) controller** strategy for adaptive threshold control:
@@ -191,17 +191,23 @@ This approach, based on control theory principles, offers superior performance c
 ### HRV Metrics
 
 **Time Domain:**
-- Mean RR, SDNN, RMSSD, NN50, pNN50, SDSD
+- Mean RR, SDNN, RMSSD, NN50, pNN50, SDSD, HTI, TINN, Skewness of NN Distribution, CVNN, CVSD
 
 **Frequency Domain:**
-- VLF: 0.003-0.04 Hz
-- LF: 0.04-0.15 Hz  
-- HF: 0.15-0.4 Hz
+- Welch's PSD (VLF: 0.003-0.04; HzLF: 0.04-0.15 Hz; HF: 0.15-0.4 Hz)
+- Total Power
+- Total Power of LF
+- Total Power of HF
+- LF (Normalized Unit)
+- HF (Normalized Unit)
+- Peak Frequency of LF
+- Peak Frequency of HF
 
 **Non-Linear:**
+- SD1
+- SD2
+- Ratio of SD1 & SD2
 - Poincaré plot indices
-- Entropy measures
-- Fractal scaling exponents
 
 ## Troubleshooting
 
